@@ -1,7 +1,17 @@
 #!/usr/bin/env bash
 NEW_CONDA_ENV_NAME=eviai
+KEYRING=Vault
+KEYS_FILE=keys.sh
+
 conda create -n $NEW_CONDA_ENV_NAME python=3.13 -y
 conda env list
+if ! -d $KEYRING
+    then echo "Creating keyring folder..."
+         mkdir $KEYRING
+         echo "export OPENAI_API_KEY=to-be-updated" > $KEYRING/$KEYS_FILE
+         chmod u+x $KEYRING/$KEYS_FILE
+    else echo "Existing keyring folder. No action taken."
+fi
 
 echo "After this script finishes correctly:"
 echo " "
