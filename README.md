@@ -7,3 +7,5 @@ To set up this project, first download the `setup.sh` script into a directory th
 - A conda environment will be created.
 - If it doesn't exist, a security folder is created, and inside, a file is stored to keep personal access tokens.
 - Additional instructions to manually clone the required repos and to install basic Python packages are shown on the screen.
+
+Finally, don't forget to populate the keys file (By default under `Vault/keys.sh`).
